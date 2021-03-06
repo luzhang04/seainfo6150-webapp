@@ -1,7 +1,10 @@
 import React from "react";
 import HTMLText from "../HTMLText/HTMLText";
+import { Route, Switch, Link, useRouteMatch } from "react-router-dom";
+
 
 const DynamicArticle = (props) => {
+  let {url} = useRouteMatch();
   return (
     <article>
       <header>
