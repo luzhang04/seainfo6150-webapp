@@ -24,29 +24,20 @@ function App() {
   }, [fetchedData]);
 
 
-
-
   return isEmpty(fetchedData) ? null : (
     <div className="App">
       <Switch>
         <Route exact path="/articlelist"><ArticleList /></Route>
-
         <Route
-          path={`${url}/articlelist/:slug`}
-          render={({ match }) => {
-            // getting the parameters from the url and passing
-            // down to the component as props
-            console.log("this slug", match.params.slug);
-            return <div>{match.params.slug}</div>;
-
-          }}
+          path="/articlelist/:slug"
+          render={({match}) =>{
+          //getting the parameters from the url and passing
+          // down to the component as props
+        //   console.log("this slug", match.params.slug);
+        return (<DynamicArticle article={fetchedData[match.params.slug]}
+                url={`${url}articlelist/`} />);
+        }}
         />
-
-        <Route>
-        <Link to={`${url}articlelist`}>Back</Link>
-          <DynamicArticle article={Object.values(fetchedData)[0]} />
-        </Route>
-
 
       </Switch>
     </div>

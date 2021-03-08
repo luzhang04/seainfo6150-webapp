@@ -8,6 +8,7 @@ const DynamicArticle = (props) => {
   return (
     <article>
       <header>
+       <Link to={props.url}>Back</Link>
         <h1>{props.article.title}</h1>
         <address>
           by {props.article.author} (
