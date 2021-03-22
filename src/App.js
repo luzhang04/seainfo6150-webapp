@@ -23,17 +23,18 @@ function App() {
   return isEmpty(fetchedData) ? <div>You have no data!</div> : (
     <div className="App">
       <Switch>
-        <Route
-          exact
-          path={`/articlelist/:slug`}
-          render={({ match }) => {
-            // getting the parameters from the url and passing
-            // down to the component as props
-            return fetchedData ? <DynamicArticle
-              article={fetchedData[match.params.slug]}
-            /> : null
-          }}
-        />
+      <Route
+        exact
+        path={`/articlelist/:slug`}
+        render={({ match }) => {
+          // getting the parameters from the url and passing
+          // down to the component as props
+          return fetchedData ? <DynamicArticle
+            article={fetchedData[match.params.slug]}
+          /> : null
+        }}
+      />
+
         <Route exact path="/articlelist">
           <ArticleList articles={Object.values(fetchedData)} />
         </Route>

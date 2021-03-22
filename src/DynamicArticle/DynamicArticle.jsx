@@ -1,12 +1,14 @@
 import React from "react";
 import HTMLText from "../HTMLText/HTMLText.jsx";
 import { Link } from "react-router-dom";
+import styles from "./DynamicArticle.module.css";
 
 const DynamicArticle = (props) => {
   return (
     <div>
-      <Link to="/articlelist">Back</Link>
-      <article>
+      <Link className={styles.link} to="/articlelist">Back</Link>
+      <br/><br/>
+      <article className={styles.article}>
         <header>
           <h1>{props.article.title}</h1>
           <address>
