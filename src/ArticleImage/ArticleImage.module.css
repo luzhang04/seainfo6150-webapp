@@ -1,0 +1,7 @@
+.container {
+  border-radius: 50%;
+  width: 150px;
+  height: 100px;
+  border: 10px solid #c00;
+  margin-bottom: 1.5rem;
+}
