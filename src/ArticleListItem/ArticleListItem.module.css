@@ -7,18 +7,21 @@
     padding: 10px;
 }
 
-.container + .container {
-    margin-top: 30px;
-}
-
 .title {
     color: #c00;
-    margin: 0 0 20px;
+    margin: 0 0 5px;
+}
+
+.article {
+  display: flex;
+  flex-flow: column wrap;
+  height:100%;
 }
 
 .text {
     font-size: 12px;
     margin: 0 0 20px;
+
 }
 
 .time {
@@ -27,4 +30,17 @@
 
 .link {
     color: #c00;
+}
+
+
+/* wide image can show by setting this CSS style in <div> img and title </div>
+.flex1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+} */
+
+.wrapper {
+  flex :1 1 auto;
 }
